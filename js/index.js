@@ -28,7 +28,7 @@ while (programa == true) {
             montoIngresado = prompt("# Por favor, ingrese un monto en pesos: ");
             alert("# Usted ingresó " + montoIngresado + " pesos. ");
             montoConvertido = parseInt(montoIngresado) / precioMonedas[0];
-            alert("# Si convertimos esa cantidad a pesos, son US$" + montoConvertido + " dólares.");
+            alert("# Si convertimos esa cantidad a dólares, son US$" + montoConvertido + " dólares.");
             break;
 
         /* 3. Euro a peso */
@@ -44,7 +44,7 @@ while (programa == true) {
             montoIngresado = prompt("# Por favor, ingrese un monto en pesos: ");
             alert("# Usted ingresó " + montoIngresado + " pesos. ");
             montoConvertido = parseInt(montoIngresado) / precioMonedas[1];
-            alert("# Si convertimos esa cantidad a pesos, son €" + montoConvertido + " euros.");
+            alert("# Si convertimos esa cantidad a euros, son €" + montoConvertido + " euros.");
             break;
 
         /* 0. Salir */
