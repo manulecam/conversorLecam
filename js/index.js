@@ -14,6 +14,7 @@ while (programa == true) {
     switch (menu()) {
         /* 1. Dólar a peso */
         case 1:
+            console.log(precioMonedas);
             montoIngresado = prompt("# Por favor, ingrese un monto en dólares: ");
             alert("# Usted ingresó " + montoIngresado + " dólares. ");
             montoConvertido = parseInt(montoIngresado) * precioMonedas[0];
@@ -46,7 +47,6 @@ while (programa == true) {
 
         /* 0. Salir */
         case 0:
-            alert("# Gracias por utilizar nuestro conversor de divisas. #");
             programa=false;
             break;
     }
