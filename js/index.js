@@ -58,10 +58,10 @@ while (programa == true) {
 // Funcion del menú
 function menu(){
     // Entrada para elegir la opción deseada (int)
-    let opcion = parseInt(prompt("# MENÚ #\nElija el número de la opción que desea realizar: \n1. DÓLAR a PESO\n2. PESO A DÓLAR\n3. EURO A PESO\n4. PESO A EURO\n0. Salir"));
+    let opcion = parseInt(prompt("# MENÚ #\nElija el número de la opción que desea realizar: \n1. DÓLAR a PESO\n2. PESO A DÓLAR\n3. EURO A PESO\n4. PESO A EURO\n\n0. Salir"));
     // While para que sólamente permita elegir una de las 3 opciones disponibles (0, 1 y 2)
     while (opcion != 0 && opcion !=1 && opcion != 2 && opcion != 3 && opcion != 4){
-        let opcion = parseInt(prompt("# MENÚ #\nElija el número de la opción que desea realizar: \n1. DÓLAR a PESO\n2. PESO A DÓLAR\n3. EURO A PESO\n4. PESO A EURO\n0. Salir"));
+        let opcion = parseInt(prompt("# MENÚ #\nElija el número de la opción que desea realizar: \n1. DÓLAR a PESO\n2. PESO A DÓLAR\n3. EURO A PESO\n4. PESO A EURO\n\n0. Salir"));
     }
     
     return opcion;
