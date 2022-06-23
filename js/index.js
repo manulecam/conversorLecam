@@ -5,8 +5,10 @@ let programa = true;
 let montoIngresado;
 let montoConvertido;
 
-// Array que almacena los precios de las Monedas. El primero es el dolar blue, el segundo el Euro blue.
-const precioMonedas = [220, 238];
+// Array que almacena los precios de las Monedas. 
+const precioDolarBlue = 220;
+const precioEuroBlue = 238;
+const precioMonedas = [precioDolarBlue, precioEuroBlue];
 
 // While principal para repetir los procesos una y otra vez, hasta que el usuario decida salir del programa.
 while (programa == true) {
