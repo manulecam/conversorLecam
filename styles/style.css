@@ -1,0 +1,33 @@
+/* Reseteo */ 
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px 2px grey;
+}
+
+/* Formateo texto */
+.contenedorIndex{
+    margin-top: 30px;
+}
+
+.contenedorIndex h1{
+    color: rgb(16, 110, 23);
+}
+.contenedorIndex h1:hover{
+    color: rgb(78, 161, 83);
+}
+
+/* Estilo boton del index */
+#boton1{
+    text-decoration: none;
+    background-color: rgb(16, 110, 23);
+    color: white;
+    padding: 6px;
+    border-radius: 10px;
+}
+#boton1:hover{
+    background-color: rgb(173, 214, 176);
+    color: rgb(11, 78, 16);
+}
