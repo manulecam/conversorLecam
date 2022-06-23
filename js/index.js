@@ -1,7 +1,12 @@
 // CONVERSOR DE DIVISAS //
 // Declaro la variable opcion para utilizarla en la función menu, y la variable programa para el while principal del programa.
-var opcion;
-var programa = true;
+let opcion;
+let programa = true;
+let montoIngresado;
+let montoConvertido;
+
+// Array que almacena los precios de las Monedas. El primero es el dolar blue, el segundo el Euro blue.
+const precioMonedas = [220, 238];
 
 // While principal para repetir los procesos una y otra vez, hasta que el usuario decida salir del programa.
 while (programa == true) {
@@ -9,18 +14,34 @@ while (programa == true) {
     switch (menu()) {
         /* 1. Dólar a peso */
         case 1:
-            let dolaresIngresados = prompt("# Por favor, ingrese un monto en dólares: ");
-            alert("# Usted ingresó " + dolaresIngresados + " dólares. ");
-            var pesosConvertidos = parseInt(dolaresIngresados) * 205;
-            alert("# Si convertimos esa cantidad a pesos, son $" + pesosConvertidos + " pesos argentinos.");
+            montoIngresado = prompt("# Por favor, ingrese un monto en dólares: ");
+            alert("# Usted ingresó " + montoIngresado + " dólares. ");
+            montoConvertido = parseInt(montoIngresado) * precioMonedas[0];
+            alert("# Si convertimos esa cantidad a pesos, son $" + montoConvertido + " pesos argentinos.");
             break;
 
         /* 2. Peso a dólar */
         case 2:
-            let pesosIngresados = prompt("# Por favor, ingrese un monto en pesos: ");
-            alert("# Usted ingresó " + pesosIngresados + " pesos. ");
-            var dolaresConvertidos = parseInt(pesosIngresados) / 205;
-            alert("# Si convertimos esa cantidad a pesos, son US$" + dolaresConvertidos + " dólares.");
+            montoIngresado = prompt("# Por favor, ingrese un monto en pesos: ");
+            alert("# Usted ingresó " + montoIngresado + " pesos. ");
+            montoConvertido = parseInt(montoIngresado) / precioMonedas[0];
+            alert("# Si convertimos esa cantidad a pesos, son US$" + montoConvertido + " dólares.");
+            break;
+
+        /* 3. Euro a peso */
+        case 3:
+            montoIngresado = prompt("# Por favor, ingrese un monto en euros: ");
+            alert("# Usted ingresó " + montoIngresado + " euros. ");
+            montoConvertido = parseInt(montoIngresado) * precioMonedas[1];
+            alert("# Si convertimos esa cantidad a pesos, son $" + montoConvertido + " pesos.");
+            break;
+
+        /* 4. Peso a euro */
+        case 4:
+            montoIngresado = prompt("# Por favor, ingrese un monto en pesos: ");
+            alert("# Usted ingresó " + montoIngresado + " pesos. ");
+            montoConvertido = parseInt(montoIngresado) / precioMonedas[1];
+            alert("# Si convertimos esa cantidad a pesos, son €" + montoConvertido + " euros.");
             break;
 
         /* 0. Salir */
@@ -35,10 +56,10 @@ while (programa == true) {
 // Funcion del menú
 function menu(){
     // Entrada para elegir la opción deseada (int)
-    var opcion = parseInt(prompt("# MENÚ #\nElija el número de la opción que desea realizar: \n1. DÓLAR a PESO\n2. PESO A DÓLAR\n0. Salir"));
+    let opcion = parseInt(prompt("# MENÚ #\nElija el número de la opción que desea realizar: \n1. DÓLAR a PESO\n2. PESO A DÓLAR\n3. EURO A PESO\n4. PESO A EURO\n0. Salir"));
     // While para que sólamente permita elegir una de las 3 opciones disponibles (0, 1 y 2)
-    while (opcion != 0 && opcion !=1 && opcion != 2){
-        var opcion = parseInt(prompt("# MENÚ #\nElija el número de la opción que desea realizar: \n1. DÓLAR a PESO\n2. PESO A DÓLAR\n0. Salir"));
+    while (opcion != 0 && opcion !=1 && opcion != 2 && opcion != 3 && opcion != 4){
+        let opcion = parseInt(prompt("# MENÚ #\nElija el número de la opción que desea realizar: \n1. DÓLAR a PESO\n2. PESO A DÓLAR\n3. EURO A PESO\n4. PESO A EURO\n0. Salir"));
     }
     
     return opcion;
